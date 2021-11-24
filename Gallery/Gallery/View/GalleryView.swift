@@ -11,22 +11,7 @@ struct GalleryView: View {
     
     @StateObject var galleryVM = GalleryVM()
     
-//    let columns: [GridItem] = Array(repeating: .init(.flexible(),alignment: .topLeading) , count: 5)
-    
-    let columns = [GridItem(.flexible(),spacing: 3),
-                   GridItem(.flexible(),spacing: 3),
-                   GridItem(.flexible(),spacing: 3),
-                   GridItem(.flexible(),spacing: 3),
-                   GridItem(.flexible(),spacing: 3)]
-    
-//    let columns = [
-//        GridItem(.fixed(100)),
-//        GridItem(.fixed(100)),
-//        GridItem(.fixed(100)),
-//        GridItem(.fixed(100)),
-//        GridItem(.fixed(100))
-//
-//                   ]
+    let columns: [GridItem] = Array(repeating: .init(.flexible()) , count: 5)
     
     var body: some View {
         NavigationView{
@@ -37,7 +22,7 @@ struct GalleryView: View {
                         
                         NavigationLink(destination: ImageDetailsView(url: info.download_url ?? "")) {
                             UrlImageView(urlString: info.download_url ?? "")
-                                .frame(width: 70, height: 70)
+                                .frame( height: 70)
                                 .scaledToFit()
                         }
                         .buttonStyle(PlainButtonStyle())
@@ -47,7 +32,7 @@ struct GalleryView: View {
 
                 
                 }
-               // .padding(.horizontal)
+                .padding(.horizontal)
              
             }
             .navigationTitle(Text("Gallery"))
