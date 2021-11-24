@@ -47,37 +47,6 @@ class ImageDetailsVM:ObservableObject {
         }
     }
     
-     func store(image: UIImage,
-                        forKey key: String,
-                        withStorageType storageType: StorageType) {
-         if let jpegRepresentation = image.jpegData(compressionQuality: 0.7) {
-            switch storageType {
-            case .fileSystem:
-                if let filePath = filePath(forKey: key) {
-                    do  {
-                        try jpegRepresentation.write(to: filePath,
-                                                    options: .atomic)
-                        print("suc")
-                    } catch let err {
-                        print("Saving file resulted in error: ", err)
-                    }
-                }
-            case .userDefaults:
-                UserDefaults.standard.set(jpegRepresentation,
-                                            forKey: key)
-            }
-        }
-    }
-    
-    
-    func filePath(forKey key: String) -> URL? {
-        let fileManager = FileManager.default
-        guard let documentURL = fileManager.urls(for: .documentDirectory,
-                                                in: FileManager.SearchPathDomainMask.userDomainMask).first else { return nil }
-        
-        return documentURL.appendingPathComponent(key + ".jpg")
-    }
-    
 }
 
 
@@ -102,7 +71,4 @@ class ImageSaver: NSObject {
 }
 
 
-enum StorageType {
-    case userDefaults
-    case fileSystem
-}
+
