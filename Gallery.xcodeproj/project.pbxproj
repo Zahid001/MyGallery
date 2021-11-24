@@ -19,6 +19,7 @@
 		C8CF2D96274E0E1300AF807B /* GalleryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CF2D95274E0E1300AF807B /* GalleryVM.swift */; };
 		C8CF2D99274E0E7E00AF807B /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CF2D98274E0E7E00AF807B /* GalleryView.swift */; };
 		C8CF2D9F274E11E000AF807B /* ImageDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CF2D9C274E11E000AF807B /* ImageDetailsVM.swift */; };
+		C8CF2DA3274E128F00AF807B /* ImageDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CF2DA2274E128F00AF807B /* ImageDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		C8CF2D95274E0E1300AF807B /* GalleryVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryVM.swift; sourceTree = "<group>"; };
 		C8CF2D98274E0E7E00AF807B /* GalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		C8CF2D9C274E11E000AF807B /* ImageDetailsVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailsVM.swift; sourceTree = "<group>"; };
+		C8CF2DA2274E128F00AF807B /* ImageDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		C8CF2D9A274E11E000AF807B /* Image Details */ = {
 			isa = PBXGroup;
 			children = (
+				C8CF2DA1274E128F00AF807B /* View */,
 				C8CF2D9B274E11E000AF807B /* VM */,
 			);
 			path = "Image Details";
@@ -153,6 +156,14 @@
 				C8CF2D9C274E11E000AF807B /* ImageDetailsVM.swift */,
 			);
 			path = VM;
+			sourceTree = "<group>";
+		};
+		C8CF2DA1274E128F00AF807B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C8CF2DA2274E128F00AF807B /* ImageDetailsView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +238,7 @@
 			files = (
 				C8CF2D86274E0CCE00AF807B /* Extensions.swift in Sources */,
 				C8CF2D9F274E11E000AF807B /* ImageDetailsVM.swift in Sources */,
+				C8CF2DA3274E128F00AF807B /* ImageDetailsView.swift in Sources */,
 				C8CF2D72274E0A8200AF807B /* ContentView.swift in Sources */,
 				C8CF2D92274E0D5E00AF807B /* ImageInformation.swift in Sources */,
 				C8CF2D70274E0A8200AF807B /* GalleryApp.swift in Sources */,
